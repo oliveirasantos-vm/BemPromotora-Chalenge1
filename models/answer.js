@@ -22,3 +22,7 @@ const answerSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+
+const answer = mongoose.model('answer', answerSchema);
+
+module.exports = answer;

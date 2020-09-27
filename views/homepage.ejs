@@ -1,6 +1,49 @@
 <%- include('parts/head') %>
 </head>
-<body>
-    <h1>Home Page</h1>
+
+<body style="width: 700px; margin-left:auto; margin-right:auto; background-color: darkgrey;">
+    <div style="background-color: azure; padding: 10px;">
+        <h1 style="text-align: center;">Bem Promotora</h1>
+        <h4 style="text-align: center;">Responda as perguntas abaixo:</h4>
+        <br>
+        <form action="/send" method="POST">
+            <fieldset>
+                <legend>1. Qual sua faixa de Idade:</legend>
+                <input type="radio" name="ageRange" value="Até 30 anos"> Até 30 Anos<br>
+                <input type="radio" name="ageRange" value="De 30 a 50 anos"> De 30 a 50 anos<br>
+                <input type="radio" name="ageRange" value="De 50 a 65 anos"> De 50 a 65 anos<br>
+                <input type="radio" name="ageRange" value="Acima de 65 anos"> Acima de 65 anos<br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>2. Qual seu convênio:</legend>
+                <input type="radio" name="agreement" value="INSS"> INSS<br>
+                <input type="radio" name="agreement" value="SIAPE"> SIAPE<br>
+                <input type="radio" name="agreement" value="Forças Armadas"> Forças Armadas<br>
+                <input type="radio" name="agreement" value="Outros"> Outros<br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>3. Qual sua faixa salarial:</legend>
+                <input type="radio" name="salaryRange" value="Até 2 SM"> Até 2 SM<br>
+                <input type="radio" name="salaryRange" value="De 2 a 4 SM"> De 2 a 4 SM<br>
+                <input type="radio" name="salaryRange" value="De 4 a 6 SM"> De 4 a 6 SM<br>
+                <input type="radio" name="salaryRange" value="Acima de 6 SM"> Acima de 6 SM<br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>4. Por que você realizou o empréstimo:</legend>
+                <input type="radio" name="loanReason" value="Pagar contas"> Pagar contas<br>
+                <input type="radio" name="loanReason" value="Reforma da Casa"> Reforma da Casa<br>
+                <input type="radio" name="loanReason" value="Compra de Carro"> Compra de Carro<br>
+                <input type="radio" name="loanReason" value="Outras"> Outras<br>
+            </fieldset>
+            <br>
+
+            <input type="submit" value="Enviar" >
+        </form>
+    </div>
+
 </body>
+
 </html>
