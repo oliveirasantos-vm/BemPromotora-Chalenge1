@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-
+const mongoose = require('../database');
 const answerSchema = new mongoose.Schema({
     ageRange:{
         type: String,
