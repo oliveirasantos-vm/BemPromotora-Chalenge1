@@ -1,9 +1,15 @@
 <%- include('parts/head') %>
 </head>
-<body style="text-align: center;">
-    <h1>Ops...</h1>
-    <br>
-    <h3>Ocorreu um erro!</h3>
-    <h4><%=err%></h4>
+
+<body>
+    <div class="content">
+        <a href="/"><img src="/images/logo.png" alt="Logo" id="logo"></a>
+
+        <h1>Ops...</h1>
+        <br>
+        <h3>Ocorreu um erro!</h3>
+        <p><%=err%></p>
+    </div>
 </body>
+
 </html>
