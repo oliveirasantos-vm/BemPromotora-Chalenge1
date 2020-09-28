@@ -7,14 +7,15 @@ exports.homepage = (req, res) => {
 exports.send = async (req, res) => {
     try{
         const _answer = await answer.create(req.body);
-        return res.send(_answer);
+        res.status = 302
+        return res.redirect('/obrigado');
     } catch (err){
-        return res.status(400).send({error: "Falha ao enviar os dados."});
+        return res.status(400).render('error', {titlepage: "Ops...", err: err});
     }
 };
 
 exports.thankyou = (req, res) => {
-
+    res.render('thankyoupage', {titlepage: "Obrigado por contribuir para o nosso projeto!"});
 };
 
 exports.error404 = (req, res) => {

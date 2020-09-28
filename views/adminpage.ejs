@@ -1,0 +1,26 @@
+<%- include('parts/head') %>
+</head>
+
+<body style="width: 700px; margin-left:auto; margin-right:auto; background-color: darkgrey;">
+    <div style="background-color: azure; padding: 10px;">
+        <h1 style="text-align: center;">Veja as Respostas:</h1><br>
+        <table style="width:100%; padding: 10px; text-align: center;">
+            <tr>
+                <th>Faixa de Idade</th>
+                <th>Convênio</th>
+                <th>Faixa de Salário</th>
+                <th>Motivo do Empréstimo</th>
+            </tr>
+            <%for(let i = 0; i < answers.length; i++){%>
+            <tr>
+                <td><%=answers[i].ageRange%></td>
+                <td><%=answers[i].agreement%></td>
+                <td><%=answers[i].salaryRange%></td>
+                <td><%=answers[i].loanReason%></td>
+            </tr>
+            <%}%>
+        </table>
+    </div>
+</body>
+
+</html>
